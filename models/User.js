@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 
-const sequelize = new Sequelize('mysql://root:root@localhost:3306/fake_users')
+const sequelize = new Sequelize('mysql://root:ant0n10m@localhost:3306/fake_users')
 
 const User = sequelize.define('user', {
   username: {
@@ -37,7 +37,10 @@ const User = sequelize.define('user', {
     }
   },
   birthDate: {
-    type: Sequelize.DATEONLY
+    type: Sequelize.DATEONLY,
+    validate: {
+      isDate: true
+    }
   },
   country: {
     type: Sequelize.STRING(2),
