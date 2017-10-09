@@ -1,6 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const {listUsers, createUser,  updateUser,  deleteUser, deleteAllUsers} = require('./controllers/User.js')
+const {listUsers, createUser, updateUser, deleteUser, deleteAllUsers} = require('./controllers/User.js')
 
 const app = express()
 
